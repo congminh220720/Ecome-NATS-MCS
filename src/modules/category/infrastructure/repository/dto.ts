@@ -25,11 +25,11 @@ export function init(sequelize: Sequelize) {
             },
             description: {
                 type: DataTypes.STRING,
-                field: "parent_id",
                 allowNull: true
             },
             parentId: {
                 type: DataTypes.STRING,
+                field: "parent_id",
                 allowNull: true
             },
             status: {

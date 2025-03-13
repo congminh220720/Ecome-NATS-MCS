@@ -10,7 +10,7 @@ const PagingDTOSchema = z.object({
     total: z.coerce.number().int().min(0).default(0).optional(),
   });
   
-  type PagingDTO = z.infer<typeof PagingDTOSchema>;
+type PagingDTO = z.infer<typeof PagingDTOSchema>;
 
 export const listCategoryApi = async (req: Request, res: Response) => {
     const { success, data, error } = PagingDTOSchema.safeParse(req.query)
